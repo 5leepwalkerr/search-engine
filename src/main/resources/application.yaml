@@ -1,0 +1,29 @@
+# example values
+indexing-settings:
+  sites:
+    - url: https://www.lenta.ru
+      name: ?????.??
+    - url: https://www.skillbox.ru
+      name: Skillbox
+    - url: https://www.playback.ru
+      name: PlayBack.Ru
+spring:
+  flyway:
+    encoding: UTF-8
+
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema: skillbox
+  datasource:
+    username: postgres
+    password: maxim277
+    url: jdbc:postgresql://localhost:5432/postgres
+server:
+  port: 8081
+
