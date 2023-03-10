@@ -20,7 +20,7 @@ public class Site {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String status;
+    Status status;
     LocalDateTime statusTime;
     String lastError;
     String url;

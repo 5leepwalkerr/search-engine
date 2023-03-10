@@ -4,4 +4,5 @@ import com.skillbox.project.statistics.StatisticsResponse;
 
 public interface StatisticsService {
     StatisticsResponse getStatistics();
+    void indexing();
 }
