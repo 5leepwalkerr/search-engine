@@ -1,9 +1,6 @@
 package com.skillbox.project.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +15,9 @@ public class Lemma {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    Integer site_id;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "site_id",nullable = false)
+    Site site;
     String lemma;
     Integer frequency;
 }
